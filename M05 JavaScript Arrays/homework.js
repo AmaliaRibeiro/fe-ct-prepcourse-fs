@@ -214,9 +214,15 @@ function breakStatement(num) {
    // Tu código:
     let nuevoArre = []
 
-    for (let i = 0; i< 10; i+=2) {
-       nuevoArre.push(num[i])
+    for (let i = 0; i< 10; i++) {
+      acum = num += 2;
+       nuevoArre.push(acum);
+       if( acum == i) {
+         nuevoArre = "Se interrumpió la ejecución";
+         break;
+       }
     } 
+    return nuevoArre;
 }
 
 function continueStatement(num) {
@@ -226,6 +232,17 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   let acumArray = []
+   let acum = num;
+   for (let i = 0; i < 10; i++) {
+      if(i === 5) {
+         continue
+      } else {
+         acum = acum += 2
+         acumArray.push(acum)
+      }
+   }
+   return acumArray;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

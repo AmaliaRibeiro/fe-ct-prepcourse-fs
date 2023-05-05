@@ -18,7 +18,7 @@ function crearUsuario() {
          this.password = password;
       }
       saludar() {
-         console.log('Hola, mi nombre es ' + this.nombre)
+         return 'Hola, mi nombre es ' + this.nombre;
       }
    }
    return Usuario
